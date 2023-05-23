@@ -9,6 +9,7 @@
 
 # Couleurs
 GREEN='\033[0;32m'
+BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
@@ -22,8 +23,14 @@ print_error() {
   echo -e "${RED}$1${NC}"
 }
 
+# Fonction pour afficher un message en bleu
+print_message() {
+  echo -e "${BLUE}$1${NC}"
+}
+
 # Demande du message de commit à l'utilisateur
-read -p "Entrez le message de commit : " commit_message
+print_message "Entrez le message de commit : "
+read commit_message
 
 # Vérification si un message de commit a été saisi
 if [[ -z "$commit_message" ]]; then
