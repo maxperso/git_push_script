@@ -15,17 +15,17 @@ NC='\033[0m' # No Color
 
 # Fonction pour afficher un message en vert
 print_success() {
-  echo -e "${GREEN}$1${NC}"
+  echo "${GREEN}$1${NC}"
 }
 
 # Fonction pour afficher un message en rouge
 print_error() {
-  echo -e "${RED}$1${NC}"
+  echo "${RED}$1${NC}"
 }
 
 # Fonction pour afficher un message en bleu
 print_message() {
-  echo -e "${BLUE}$1${NC}"
+  echo "${BLUE}$1${NC}"
 }
 
 # Demande du message de commit à l'utilisateur
